@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorCollection matches snapshot 1`] = `
+Array [
+  Object {
+    "alive": false,
+    "failures": Object {
+      "testOne": false,
+    },
+    "identity": "testOne",
+  },
+]
+`;

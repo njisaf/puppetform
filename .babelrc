@@ -1,3 +1,49 @@
+// {
+//   "presets": [
+//     "env", "stage-0", "react"
+//   ],
+//   "plugins": [
+//     [
+//       "universal-import", {
+//         "disableWarnings": true
+//       }
+//     ],
+//     [
+//       "transform-runtime", {
+//         "helpers": false,
+//         "polyfill": false,
+//         "regenerator": true,
+//         "moduleName": "babel-runtime"
+//       }
+//     ],
+//     "transform-class-properties"
+//   ],
+//   "env": {
+//     "development": {
+//       "plugins": ["react-hot-loader/babel"]
+//     },
+//     "test": {
+//       "presets": ["env", "stage-0", "react"]
+//     }
+//   },
+//   "compact": false
+// }
+
 {
-  "extends": "react-static/.babelrc"
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "esmodules": true
+        }
+      }
+    ],
+    "@babel/react"
+  ],
+  "plugins": [
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-transform-async-to-generator",
+    "@babel/plugin-transform-runtime"
+  ]
 }
